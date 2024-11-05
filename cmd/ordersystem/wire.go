@@ -6,12 +6,12 @@ package main
 import (
 	"database/sql"
 
-	"https://github.com/psilva1982/cleanarch_challange/internal/entity"
-	"https://github.com/psilva1982/cleanarch_challange/internal/event"
-	"https://github.com/psilva1982/cleanarch_challange/internal/infra/database"
-	"https://github.com/psilva1982/cleanarch_challange/internal/infra/web"
-	"https://github.com/psilva1982/cleanarch_challange/internal/usecase"
-	"https://github.com/psilva1982/cleanarch_challange/pkg/events"
+	"github.com/psilva1982/cleanarch_challange/internal/entity"
+	"github.com/psilva1982/cleanarch_challange/internal/event"
+	"github.com/psilva1982/cleanarch_challange/internal/infra/database"
+	"github.com/psilva1982/cleanarch_challange/internal/infra/web"
+	"github.com/psilva1982/cleanarch_challange/internal/usecase"
+	"github.com/psilva1982/cleanarch_challange/pkg/events"
 	"github.com/google/wire"
 )
 
