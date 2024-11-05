@@ -1,4 +1,4 @@
-module github.com/devfullcycle/20-CleanArch
+module https://github.com/psilva1982/cleanarch_challange.git
 
 go 1.19
 
