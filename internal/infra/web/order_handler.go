@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/devfullcycle/20-CleanArch/internal/entity"
-	"github.com/devfullcycle/20-CleanArch/internal/usecase"
-	"github.com/devfullcycle/20-CleanArch/pkg/events"
+	"github.com/psilva1982/cleanarch_challange/internal/entity"
+	"github.com/psilva1982/cleanarch_challange/internal/usecase"
+	"github.com/psilva1982/cleanarch_challange/pkg/events"
 )
 
 type WebOrderHandler struct {

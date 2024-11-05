@@ -1,4 +1,4 @@
-module github.com/psilva1982/cleanarch_challange.git
+module github.com/psilva1982/cleanarch_challange
 
 go 1.19
 
