@@ -62,6 +62,10 @@ type MutationResolver interface {
 	CreateOrder(ctx context.Context, input *model.OrderInput) (*model.Order, error)
 }
 
+type QueryResolver interface {
+	ListOrder(ctx context.Context) ([]*model.Order, error)
+}
+
 type executableSchema struct {
 	resolvers  ResolverRoot
 	directives DirectiveRoot

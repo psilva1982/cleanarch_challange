@@ -53,8 +53,8 @@ func (h *WebOrderHandler) List(w http.ResponseWriter, r *http.Request) {
 	encoder := json.NewEncoder(w)
 	encoder.SetIndent("", "  ")
 
-	listCategories := usecase.NewListOrderUseCase(h.OrderRepository, )
-	output, err := listCategories.Execute()
+	listOrders := usecase.NewListOrderUseCase(h.OrderRepository, )
+	output, err := listOrders.Execute()
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

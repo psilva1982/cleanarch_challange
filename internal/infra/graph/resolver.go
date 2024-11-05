@@ -1,6 +1,8 @@
 package graph
 
-import "github.com/psilva1982/cleanarch_challange/internal/usecase"
+import (
+	"github.com/psilva1982/cleanarch_challange/internal/usecase"
+)
 
 // This file will not be regenerated automatically.
 //
@@ -8,4 +10,5 @@ import "github.com/psilva1982/cleanarch_challange/internal/usecase"
 
 type Resolver struct {
 	CreateOrderUseCase usecase.CreateOrderUseCase
+	ListOrderUseCase usecase.ListOrderUseCase
 }
