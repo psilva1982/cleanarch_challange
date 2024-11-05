@@ -30,8 +30,8 @@ func (r *mutationResolver) CreateOrder(ctx context.Context, input *model.OrderIn
 	}, nil
 }
 
+// ListOrder is the resolver for the listOrder field.
 func (r *queryResolver) ListOrder(ctx context.Context) ([]*model.Order, error) {
-
 	data, err := r.ListOrderUseCase.Execute()
 	if err != nil {
 		return nil, err
@@ -51,9 +51,11 @@ func (r *queryResolver) ListOrder(ctx context.Context) ([]*model.Order, error) {
 	return orders, nil
 }
 
-// Mutation returns MutationResolver implementation.
+// Mutation returns graph.MutationResolver implementation.
 func (r *Resolver) Mutation() MutationResolver { return &mutationResolver{r} }
-func (r *Resolver) Query() QueryResolver       { return &queryResolver{r} }
+
+// Query returns graph.QueryResolver implementation.
+func (r *Resolver) Query() QueryResolver { return &queryResolver{r} }
 
 type mutationResolver struct{ *Resolver }
 type queryResolver struct{ *Resolver }
