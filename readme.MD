@@ -19,7 +19,10 @@ docker compose -f "docker-compose.yaml" up
 
 ## Fazendo chamadas Rest
 
+
 Para fazer chamadas rest existe na pasta **api** exemplos de chamadas que utilizam o **plugin REST Client do VS Code**, ou então tendo o **curl** instalado em sua máquina basta digitar os seguintes comandos: 
+
+O servidor rest responde na **porta 8000**
 
 Para criar uma nova order:
 ```
@@ -40,7 +43,8 @@ curl -X GET http://localhost:8000/order \
 
 ## Fazendo chamadas graphQL
 
-Abra o navegador no endereço (http://localhost:50051/query) 
+O servidor graphql responde na **porta 50051**, para executar os 
+testes abra o navegador no endereço (http://localhost:50051/query) 
 
 Para criar uma nova order: 
 ```
@@ -74,13 +78,13 @@ query listOrder {
 
 ## Fazendo chamadas gRPC
 
-Com o client [evans](https://github.com/ktr0731/evans) instalado digite os seguintes comandos:
+O serviço gRPC roda na **porta padrão 50051**. Então com o client [evans](https://github.com/ktr0731/evans) instalado digite os seguintes comandos:
 
 ```
 evans -r repl 
 ```
 
-Após abrir o terminal do **evans** selecione o package **pb**
+Ao abrir o terminal do **evans** selecione o package **pb**
 
 ```
 package pb
