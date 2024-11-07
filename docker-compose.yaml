@@ -13,6 +13,7 @@ services:
       - 3306:3306
     volumes:
       - .docker/mysql:/var/lib/mysql
+      #- ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
   rabbitmq:
     image: rabbitmq:3-management
@@ -24,3 +25,19 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
+
+  # ordersystem:
+  #   env_file:
+  #     - ./cmd/ordersystem/.env
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: ordersystem
+  #   restart: always
+  #   ports:
+  #     - 8000:8000
+  #     - 8080:8080
+  #     - 50051:50051
+  #   depends_on:
+  #     - mysql
+  #     - rabbitmq
