@@ -1,4 +1,23 @@
-## Fazendo chamadas rest
+# Desafio Golang Clean Architecture 
+
+Este projeto implementa os serviços de criação e listagem de ordens. 
+É possível executar as operações em três formas diferentes:
+
+- REST API 
+- GRAPHQL
+- gRPC
+
+Para executar o projeto é necessário ter o docker e o git instalado na sua máquina.
+
+```
+# Efetue o clone do projeto
+git clone https://github.com/psilva1982/cleanarch_challange.git
+
+# Execute o comando docker para iniciar o servidor
+docker compose -f "docker-compose.yaml" up
+```
+
+## Fazendo chamadas Rest
 
 Para fazer chamadas rest existe na pasta **api** exemplos de chamadas que utilizam o **plugin REST Client do VS Code**, ou então tendo o **curl** instalado em sua máquina basta digitar os seguintes comandos: 
 
@@ -58,7 +77,7 @@ query listOrder {
 Com o client [evans](https://github.com/ktr0731/evans) instalado digite os seguintes comandos:
 
 ```
-$ evans -r repl 
+evans -r repl 
 ```
 
 Após abrir o terminal do **evans** selecione o package **pb**
